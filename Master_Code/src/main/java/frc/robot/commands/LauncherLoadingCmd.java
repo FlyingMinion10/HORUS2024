@@ -19,7 +19,7 @@ public class LauncherLoadingCmd extends Command {
     @Override
     public void initialize() {
         System.out.println("Loading Cmd started!");
-        stage = 0;
+        stage = 1;
         timer.reset();
         timer.start();
     }

@@ -23,7 +23,7 @@ public class LauncherActivateCmd extends Command {
     @Override
     public void initialize() {
         System.out.println("Launcher Cmd started!");
-        stage = 0;
+        stage = 1;
         timer.reset();
         timer.start();
     }

@@ -1,0 +1,47 @@
+package frc.robot.commands;
+
+import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.subsystems.SwerveSubsystem;
+import frc.robot.subsystems.LimeLightSubsystem; // Asumiendo que tienes un subsistema para manejar la LimeLight
+
+public class AutoAimCmd extends Command {
+    private final SwerveSubsystem swerveSubsystem;
+    private final LimeLightSubsystem limeLightSubsystem;
+    public static boolean AutoAimRunning;
+
+    public AutoAimCmd(SwerveSubsystem swerveSubsystem, LimeLightSubsystem limeLightSubsystem) {
+        this.swerveSubsystem = swerveSubsystem;
+        this.limeLightSubsystem = limeLightSubsystem;
+        addRequirements(swerveSubsystem);
+    }
+
+    @Override
+    public void initialize() {
+        limeLightSubsystem.setPipeline(1); // Asumiendo que tienes un método para configurar la pipeline adecuada
+        System.out.println("AutoAimCmd Started ");
+        AutoAimRunning = true;
+    
+    }
+
+    @Override
+    public void execute() {
+        // Obtiene la desviación angular (yaw) y la distancia desde la LimeLight
+        
+
+    }
+
+    @Override
+    public boolean isFinished() {
+        // Define una condición para finalizar el comando, por ejemplo, cuando el robot esté suficientemente alineado
+        return limeLightSubsystem.isTargetAligned();
+    }
+
+    @Override
+    public void end(boolean interrupted) {
+        if (interrupted) {
+            swerveSubsystem.stopModules();
+        }
+        System.out.println("AutoAimCmd Finished ");
+        AutoAimRunning = false;
+    }
+}

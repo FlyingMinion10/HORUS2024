@@ -24,7 +24,6 @@ public class LauncherActivateCmd extends Command {
     public void initialize() {
         System.out.println("Launcher Cmd started!");
         swerveSubsystem.stopModules();
-        stage = 0;
         timer.reset();
         timer.start();
     }

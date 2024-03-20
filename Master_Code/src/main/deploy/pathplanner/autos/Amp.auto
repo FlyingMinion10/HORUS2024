@@ -1,0 +1,68 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 0.87,
+      "y": 6.95
+    },
+    "rotation": -120.0
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "sequential",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
+                  "name": "LauncherActivateCmd"
+                }
+              },
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "Start to close (Amp)"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "LauncherActivateCmd"
+                }
+              },
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "Close to long (Amp)"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "LauncherActivateCmd"
+                }
+              },
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "Extra note (Amp)"
+                }
+              },
+              {
+                "type": "named",
+                "data": {
+                  "name": "LauncherActivateCmd"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "folder": null,
+  "choreoAuto": false
+}

@@ -1,0 +1,56 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 1.3535699355624904,
+      "y": 5.549606710262527
+    },
+    "rotation": 180.0
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "named",
+          "data": {
+            "name": "LauncherActivateCmd"
+          }
+        },
+        {
+          "type": "parallel",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
+                  "name": "IntakeActivateCmd"
+                }
+              },
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "(Centre) 1st reload"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "IntakeStopCmd"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "(Centre) 1st score"
+          }
+        }
+      ]
+    }
+  },
+  "folder": null,
+  "choreoAuto": false
+}

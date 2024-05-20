@@ -1,0 +1,94 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 1.0,
+      "y": 4.38
+    },
+    "rotation": 125.0
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "sequential",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
+                  "name": "LauncherActivateCmd"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "race",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
+                  "name": "IntakeActivateCmd"
+                }
+              },
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "(Src) 1st reload"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "(Src) 1st score"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "LauncherActivateCmd"
+          }
+        },
+        {
+          "type": "race",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
+                  "name": "IntakeActivateCmd"
+                }
+              },
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "(Src) 2nd reload"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "(Src) 2nd score"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "LauncherActivateCmd"
+          }
+        }
+      ]
+    }
+  },
+  "folder": null,
+  "choreoAuto": false
+}

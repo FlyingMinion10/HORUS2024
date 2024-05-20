@@ -1,0 +1,87 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 1.3535699355624904,
+      "y": 5.549606710262527
+    },
+    "rotation": 180.0
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "named",
+          "data": {
+            "name": "LauncherActivateCmd"
+          }
+        },
+        {
+          "type": "race",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
+                  "name": "IntakeActivateCmd"
+                }
+              },
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "(Centre) 1st reload"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "(Centre) 1st score"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "LauncherActivateCmd"
+          }
+        },
+        {
+          "type": "race",
+          "data": {
+            "commands": [
+              {
+                "type": "named",
+                "data": {
+                  "name": "IntakeActivateCmd"
+                }
+              },
+              {
+                "type": "path",
+                "data": {
+                  "pathName": "(Centre) 2nd reload"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "(Centre) 2nd score"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "LauncherActivateCmd"
+          }
+        }
+      ]
+    }
+  },
+  "folder": null,
+  "choreoAuto": false
+}
